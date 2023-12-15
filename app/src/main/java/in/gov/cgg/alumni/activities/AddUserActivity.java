@@ -305,10 +305,11 @@ ActivityAdduserBinding binding;
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-                    } else {
-                        Toast.makeText(AddUserActivity.this, "Please Check Internet ", Toast.LENGTH_SHORT).show();
-
                     }
+                }
+                else {
+                    Toast.makeText(AddUserActivity.this, "Please Check Internet ", Toast.LENGTH_SHORT).show();
+
                 }
             }
         });
