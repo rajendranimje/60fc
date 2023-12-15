@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:showIn="@layout/activity_fcmcgg">
+
+    <EditText
+        android:id="@+id/api_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Firebase Server API key"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/ntitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Notification Title" />
+
+    <EditText
+        android:id="@+id/nbody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Notification Body"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/ntopic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:ems="10"
+        android:hint="Notification Topic"
+        />
+
+    <EditText
+        android:id="@+id/nclick_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:ems="10"
+        android:hint="Notification Click Action"
+        android:inputType="textPersonName"
+         />
+
+    <EditText
+        android:id="@+id/nsound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Notification Sound path"
+        android:inputType="textPersonName"
+        />
+
+    <Button
+        android:id="@+id/push"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PUSH"
+        />
+</LinearLayout>

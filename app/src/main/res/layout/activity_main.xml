@@ -1,0 +1,285 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/toolbar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_profile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2.5"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="@string/app_name"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_margin="1dp"
+                android:layout_weight="0.5"
+                android:background="@color/colorPrimary" />
+
+            <in.gov.cgg.alumni.library.MaterialSearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search By Name"
+                android:visibility="gone" />
+
+
+            <ImageView
+                android:id="@+id/img_notifyclick"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:padding="10dp"
+                android:src="@drawable/baseline_notifications_black_48dp"
+                android:tint="#fff" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filter_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/inver_bt_background"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/tv_loc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/bt_background"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="Location" />
+
+            <TextView
+                android:id="@+id/tv_dept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/bt_background"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="Dept/Ministry" />
+
+            <TextView
+                android:id="@+id/tv_desgi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/bt_background"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="Designation" />
+
+            <TextView
+                android:id="@+id/tv_mblno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/bt_background"
+                android:padding="5dp"
+                android:textSize="12sp"
+                android:text="Mobile" />
+
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/filter_ll">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/filter_ll" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dp_10">
+
+            <!--
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabmain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:elevation="@dimen/dp_5"
+                        android:padding="@dimen/dp_5"
+                        android:src="@drawable/baseline_message_black_24"
+                        android:tint="@color/white"
+                        android:visibility="gone"
+                        app:fab_size="normal" />
+            -->
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabTextuser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:backgroundTint="@color/colorPrimary"
+                android:elevation="@dimen/dp_5"
+                android:padding="@dimen/dp_5"
+                android:src="@drawable/baseline_message_black_24"
+                android:tint="@color/white"
+                android:visibility="gone"
+                app:fab_size="normal" />
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/fab_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:elevation="5dp"
+                android:visibility="gone"
+                app:layout_anchor="@id/bottom_app_bar"
+                app:layout_anchorGravity="center_horizontal"
+                app:menu_colorNormal="@color/colorPrimary"
+                app:menu_colorPressed="@color/white"
+                app:menu_colorRipple="@color/white"
+                app:menu_labels_colorPressed="@color/white"
+                app:menu_openDirection="up">
+
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fabAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_person_add_black_24"
+                    android:tag="Add User"
+                    android:tint="@color/white"
+                    app:fab_colorNormal="@color/white"
+                    app:fab_colorPressed="@color/colorPrimary"
+                    app:fab_colorRipple="@color/colorPrimary"
+                    app:fab_size="mini" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fabText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_message_black_24"
+                    android:tag="Compose Message"
+                    android:tint="@color/white"
+                    app:fab_colorNormal="@color/white"
+                    app:fab_colorPressed="@color/colorPrimary"
+                    app:fab_colorRipple="@color/colorPrimary"
+                    app:fab_size="mini" />
+
+
+            </com.github.clans.fab.FloatingActionMenu>
+
+            <!--
+                    <com.github.clans.fab.FloatingActionMenu
+                        android:id="@+id/fab_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_10"
+                        android:elevation="5dp"
+                        android:visibility="gone"
+                        app:layout_anchor="@id/bottom_app_bar"
+                        app:layout_anchorGravity="center_horizontal"
+                        app:menu_colorNormal="@color/colorPrimary"
+                        app:menu_colorPressed="@color/white"
+                        app:menu_colorRipple="@color/white"
+                        app:menu_labels_colorPressed="@color/white"
+                        app:menu_openDirection="up">
+
+
+                        <com.github.clans.fab.FloatingActionButton
+                            android:id="@+id/fab_raise"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ticket"
+                            android:tag="Add User"
+                            android:tint="@color/white"
+                            app:fab_colorNormal="@color/white"
+                            app:fab_colorPressed="@color/colorPrimary"
+                            app:fab_colorRipple="@color/colorPrimary"
+                            app:fab_size="mini" />
+
+                        <com.github.clans.fab.FloatingActionButton
+                            android:id="@+id/fabTextuser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/baseline_message_black_24"
+                            android:tag="Compose Message"
+                            android:tint="@color/white"
+                            app:fab_colorNormal="@color/white"
+                            app:fab_colorPressed="@color/colorPrimary"
+                            app:fab_colorRipple="@color/colorPrimary"
+                            app:fab_size="mini" />
+
+
+                    </com.github.clans.fab.FloatingActionMenu>
+            -->
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_nodata"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Batch members available"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"/>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:padding="10dp"
+                android:src="@drawable/userpro"
+                android:tint="#fff" />
+
+            <TextView
+                android:id="@+id/tv_alumni"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="2.5"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_margin="1dp"
+                android:layout_weight="0.5"
+                android:background="@color/colorPrimary" />
+
+            <!--
+                    <in.gov.cgg.alumni.library.MaterialSearchView
+                        android:id="@+id/search_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Search By Name"
+                        app:queryHint="Search"
+                        app:searchIcon="@drawable/ic_action_action_search"
+                        android:visibility="gone" />
+            -->
+
+            <ImageView
+                android:id="@+id/tv_notif"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:padding="10dp"
+                android:src="@drawable/baseline_notifications_black_48dp"
+                android:tint="#fff" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filter_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_loc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/bt_background"
+                android:padding="5dp"
+                android:text="Location" />
+
+            <TextView
+                android:id="@+id/tv_dept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/bt_background"
+                android:padding="5dp"
+                android:text="Dept/Ministry" />
+
+            <TextView
+                android:id="@+id/tv_desgi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/bt_background"
+                android:padding="5dp"
+                android:text="Designation" />
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:id="@+id/frag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/filter_ll">
+        </FrameLayout>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/cc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible">
+
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bottom_app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hideOnScroll="true"
+                android:layout_gravity="bottom"
+                app:fabAlignmentMode="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="bottom"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/buttonList"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/fabshape"
+                        android:text="LIST"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Button
+                        android:id="@+id/buttonMaps"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/fabshape"
+                        android:text="MAP"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimary" />
+
+
+                </LinearLayout>
+
+
+            </com.google.android.material.bottomappbar.BottomAppBar>
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:elevation="5dp"
+                app:menu_labels_colorPressed="@color/white"
+                app:menu_colorPressed="@color/white"
+                app:menu_colorRipple="@color/white"
+                app:layout_anchor="@id/bottom_app_bar"
+                app:layout_anchorGravity="center_horizontal"
+                app:menu_colorNormal="@color/colorPrimary"
+                app:menu_openDirection="up">
+
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fabAdd"
+                    app:fab_size="mini"
+                    android:tag="Add User"
+                    app:fab_colorNormal="@color/white"
+                    android:tint="@color/white"
+                    app:fab_colorPressed="@color/colorPrimary"
+                    app:fab_colorRipple="@color/colorPrimary"
+                    android:src="@drawable/baseline_person_add_black_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/fabText"
+                    app:fab_size="mini"
+                    android:tag="Compose Message"
+                    app:fab_colorNormal="@color/white"
+                    app:fab_colorPressed="@color/colorPrimary"
+                    app:fab_colorRipple="@color/colorPrimary"
+                    android:tint="@color/white"
+                    android:src="@drawable/baseline_message_black_24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </com.github.clans.fab.FloatingActionMenu>
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/dp_5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFEFF2F5"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginRight="@dimen/dp_5"
+                    android:layout_weight="1.6"
+                    android:orientation="vertical"
+                    android:paddingRight="@dimen/dp_5">
+
+                    <TextView
+                        android:id="@+id/tv_subject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif-condensed"
+                        android:paddingTop="3dp"
+                        android:text="Subject : "
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/tv_msg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp_2"
+                        android:fontFamily="sans-serif-condensed"
+                        android:lineSpacingExtra="@dimen/dp_2"
+                        android:paddingTop="3dp"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.4"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="5">
+
+                    <ImageView
+                        android:id="@+id/img_notify"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_5"
+                        android:background="@drawable/pic_back"
+                        android:padding="2dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/loadingimg_red" />
+
+<!--
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="1.5dp"
+                        android:paddingBottom="3dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="shdjsdjsj\ndsnfjsjsdfh"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+<!--
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mes"/>
+-->
+
+                <TextView
+                    android:id="@+id/tv_fromname"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Message from : "
+                    android:textSize="12sp" />
+<!--
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="dskjfdkjnfk"/>
+-->
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="3dp"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="shdjsdjsj\ndsnfjsjsdfh"
+                        android:textAlignment="textEnd"
+                        android:textSize="12sp"
+                        android:paddingRight="@dimen/dp_5"
+                        android:gravity="end" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/card"
+        android:background="#cfcdcd"
+        android:paddingTop="5dp" />
+
+</RelativeLayout>
