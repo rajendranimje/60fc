@@ -12,8 +12,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
+
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import androidx.annotation.NonNull;
@@ -77,24 +76,22 @@ public class FCMMineMessageActivity extends Activity {
             public void onClick(View v) {
                 // Get token
                 // [START retrieve_current_token]
-                FirebaseInstanceId.getInstance().getInstanceId()
-                        .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<InstanceIdResult> task) {
-                                if (!task.isSuccessful()) {
-                                    Log.w(TAG, "getInstanceId failed", task.getException());
-                                    return;
-                                }
-
-                                // Get new Instance ID token
-                                String token = task.getResult().getToken();
-
-                                // Log and toast
-                                String msg = getString(R.string.msg_token_fmt, token);
-                                Log.d(TAG, msg);
-                                impRegId = token;
-                                Toast.makeText(FCMMineMessageActivity.this, msg, Toast.LENGTH_SHORT).show();
+                FirebaseMessaging.getInstance().getToken()
+                        .addOnCompleteListener(task -> {
+                            if (!task.isSuccessful()) {
+                                return;
                             }
+
+                            String token = task.getResult();
+
+                            // Log and toast
+                            String msg = getString(R.string.msg_token_fmt, token);
+                            Log.d(TAG, msg);
+                            impRegId = token;
+                            Toast.makeText(FCMMineMessageActivity.this, msg, Toast.LENGTH_SHORT).show();
+                            // Do whatever you want with your token now
+                            // i.e. store it on SharedPreferences or DB
+                            // or directly send it to server
                         });
                 // [END retrieve_current_token]
             }

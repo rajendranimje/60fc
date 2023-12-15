@@ -21,8 +21,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
+
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -122,35 +121,24 @@ public class FinalTextActivity extends Activity {
                 Log.d(TAG, "Key: " + key + " Value: " + value);
             }
         }
-        FirebaseInstanceId.getInstance().getInstanceId()
-                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
-                        if (!task.isSuccessful()) {
-                            Log.w(TAG, "getInstanceId failed", task.getException());
-                            return;
-                        }
-                        // Get new Instance ID token
-                        String token = task.getResult().getToken();
-                        // Log and toast
-                        String msg = getString(R.string.msg_token_fmt, token);
-                        Log.d(TAG, msg);
-                        impRegId = token;
-                        //Toast.makeText(FinalTextActivity.this, msg, Toast.LENGTH_SHORT).show();
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(task -> {
+                    if (!task.isSuccessful()) {
+                        return;
                     }
+
+                    String token = task.getResult();
+                    // Log and toast
+                    String msg = getString(R.string.msg_token_fmt, token);
+                    Log.d(TAG, msg);
+                    impRegId = token;
+                    //Toast.makeText(FinalTextActivity.this, msg, Toast.LENGTH_SHORT).show();
+
+
+                    // Do whatever you want with your token now
+                    // i.e. store it on SharedPreferences or DB
+                    // or directly send it to server
                 });
-//        FirebaseMessaging.getInstance().subscribeToTopic("weather")
-//                .addOnCompleteListener(new OnCompleteListener<Void>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<Void> task) {
-//                        String msg = getString(R.string.msg_subscribed);
-//                        if (!task.isSuccessful()) {
-//                            msg = getString(R.string.msg_subscribe_failed);
-//                        }
-//                        Log.d(TAG, msg);
-//                        Toast.makeText(FinalTextActivity.this, msg, Toast.LENGTH_SHORT).show();
-//                    }
-//                });
 
         tv_send.setOnClickListener(new View.OnClickListener() {
             @Override

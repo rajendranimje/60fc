@@ -134,7 +134,7 @@ ActivityMainBinding binding;
 //            }
 //        });
 
-        binding.fabText.setOnClickListener(new View.OnClickListener() {
+        binding.fabTextuser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(DashboardActivity.this, FinalTextActivity.class));
