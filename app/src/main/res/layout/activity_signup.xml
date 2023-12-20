@@ -109,7 +109,7 @@
                                 android:id="@+id/input_layout_username"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:theme="@style/TextLabel">
+                                >
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/input_username"
@@ -117,7 +117,7 @@
                                     android:layout_height="wrap_content"
                                     android:hint="@string/hint_user"
                                     android:inputType="textPersonName"
-                                    android:theme="@style/TextInputEditText" />
+                                   />
 
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -125,7 +125,7 @@
                                 android:id="@+id/input_layout_des"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:theme="@style/TextLabel">
+                                >
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/input_designation"
@@ -133,7 +133,7 @@
                                     android:layout_height="wrap_content"
                                     android:hint="@string/hint_des"
                                     android:inputType="text"
-                                    android:theme="@style/TextInputEditText" />
+                                   />
 
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -189,7 +189,7 @@
                                 android:id="@+id/input_layout_dept"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:theme="@style/TextLabel">
+                                >
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/input_dept"
@@ -197,7 +197,7 @@
                                     android:layout_height="wrap_content"
                                     android:hint="@string/hint_dept"
                                     android:inputType="text"
-                                    android:theme="@style/TextInputEditText" />
+                                   />
 
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -205,7 +205,7 @@
                                 android:id="@+id/input_layout_date"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:theme="@style/TextLabel">
+                                >
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/input_date"
@@ -213,7 +213,7 @@
                                     android:layout_height="wrap_content"
                                     android:hint="@string/hint_date"
                                     android:inputType="datetime|date"
-                                    android:theme="@style/TextInputEditText" />
+                                   />
 
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -221,7 +221,7 @@
                                 android:id="@+id/input_layout_mbl"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:theme="@style/TextLabel">
+                                >
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/input_mbl"
@@ -230,7 +230,7 @@
                                     android:hint="@string/hint_mbl"
                                     android:inputType="phone"
                                     android:maxLength="10"
-                                    android:theme="@style/TextInputEditText" />
+                                   />
 
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -238,7 +238,7 @@
                                 android:id="@+id/input_layout_address"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:theme="@style/TextLabel">
+                                >
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/input_address"
@@ -246,7 +246,7 @@
                                     android:layout_height="wrap_content"
                                     android:hint="@string/hint_address"
                                     android:inputType="textMultiLine"
-                                    android:theme="@style/TextInputEditText" />
+                                   />
 
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -254,7 +254,7 @@
                                 android:id="@+id/input_layout_city"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:theme="@style/TextLabel">
+                                >
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/input_city"
@@ -262,7 +262,7 @@
                                     android:layout_height="wrap_content"
                                     android:hint="City"
                                     android:inputType="text"
-                                    android:theme="@style/TextInputEditText" />
+                                   />
 
                             </com.google.android.material.textfield.TextInputLayout>
 
@@ -270,14 +270,14 @@
                                 android:id="@+id/input_layout_email"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:theme="@style/TextLabel">
+                                >
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/input_email"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:hint="Email Id"
-                                    android:theme="@style/TextInputEditText" />
+                                   />
 
                             </com.google.android.material.textfield.TextInputLayout>
 

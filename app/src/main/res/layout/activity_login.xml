@@ -36,21 +36,12 @@
                 android:gravity="center"
                 android:padding="5dp">
 
-                <!--
-                            <TextView
-                                android:id="@+id/tv_username"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Mobile Number"
-                                android:textColor="@color/colorPrimary" />
-                -->
-
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/input_layout_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/TextLabel">
+                    >
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/et_mobile"

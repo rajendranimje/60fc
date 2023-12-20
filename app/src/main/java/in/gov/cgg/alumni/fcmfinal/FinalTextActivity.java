@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -31,6 +32,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.regex.Pattern;
 
 import androidx.annotation.NonNull;
 import in.gov.cgg.alumni.GlobalDeclaration;
@@ -145,7 +147,9 @@ public class FinalTextActivity extends Activity {
             public void onClick(View v) {
                 if (CheckInternet.isOnline(FinalTextActivity.this)) {
                     // FirebaseMessaging.getInstance().unsubscribeFromTopic("weather");
-                    sendMessageRequest();
+                    if(validateFields(v)) {
+                        sendMessageRequest();
+                    }
                     //Toast.makeText(FinalTextActivity.this, "unsubscribed", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(FinalTextActivity.this, "Please Check Internet", Toast.LENGTH_SHORT).show();
@@ -154,6 +158,21 @@ public class FinalTextActivity extends Activity {
 
         });
 
+    }
+
+
+    private boolean validateFields(View view) {
+        if (et_subject.getText().toString().trim().isEmpty()) {
+            et_subject.requestFocus();
+            Snackbar.make(view, "Please enter subject", Snackbar.LENGTH_SHORT).show();
+            return false;
+        }
+        else  if (et_type.getText().toString().trim().isEmpty()) {
+            et_type.requestFocus();
+            Snackbar.make(view, "Please enter message", Snackbar.LENGTH_SHORT).show();
+            return false;
+        }
+        return true;
     }
 
     private void sendMessageRequest() {

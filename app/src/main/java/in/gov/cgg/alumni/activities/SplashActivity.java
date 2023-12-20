@@ -66,8 +66,8 @@ public class SplashActivity extends AppCompatActivity {
                             // Sign-in success, user is signed in
                             FirebaseUser user = mAuth.getCurrentUser();
                             if(user!=null) {
-                                Toast.makeText(SplashActivity.this, "Authentication Success: " + mAuth.getUid(),
-                                        Toast.LENGTH_SHORT).show();
+                               /* Toast.makeText(SplashActivity.this, "Authentication Success: " + mAuth.getUid(),
+                                        Toast.LENGTH_SHORT).show();*/
                                 try {
                                     FirebaseMessaging.getInstance().subscribeToTopic("weather")
                                             .addOnCompleteListener(new OnCompleteListener<Void>() {
