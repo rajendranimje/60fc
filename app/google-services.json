@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "546486723467",
+    "firebase_url": "https://fc-97a2c.firebaseio.com",
+    "project_id": "fc-97a2c",
+    "storage_bucket": "fc-97a2c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546486723467:android:dd185fd2fdad4542",
+        "android_client_info": {
+          "package_name": "in.gov.cgg.alumni"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546486723467-66novj2kih9uk22qnijahridcakiagv4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "in.gov.cgg.alumni",
+            "certificate_hash": "90c6b0cffd1e11fc9b879e95b585b237e414f77d"
+          }
+        },
+        {
+          "client_id": "546486723467-a2j47cctqjii70ucv5kuq4mjgeubfdtv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5rLjmO8yf07D-5cGMGL3Kiy1lLVtqtTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546486723467-a2j47cctqjii70ucv5kuq4mjgeubfdtv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
