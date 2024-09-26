@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 7.2.2" type="baseline" client="gradle" dependencies="false" name="AGP (7.2.2)" variant="fatal" version="7.2.2">
+
+    <issue
+        id="NotSibling"
+        message="`@+id/rl` is not a sibling in the same `RelativeLayout`"
+        errorLine1="            android:layout_below=&quot;@+id/rl&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_adduser.xml"
+            line="260"
+            column="13"/>
+    </issue>
+
+</issues>

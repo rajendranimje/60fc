@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/winlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:weightSum="2">
+
+        <!--
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="2dp"
+                    android:text="nadfndmndngjkdfnjndfngnfddfme"
+                    android:textColor="@color/white"
+
+                    />
+        -->
+
+        <!--
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary"/>
+        -->
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/pic"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_5"
+            android:src="@drawable/fc_logo" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_margin="3dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="gfjghghgfhgfhfgfg"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+
+                />
+
+
+            <TextView
+                android:id="@+id/desg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dgfd"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+
+                />
+
+            <TextView
+                android:id="@+id/dept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dfgfdfd"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+
+                />
+
+        </LinearLayout>
+
+
+        <!--
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp_5"
+                    android:padding="2dp"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:text="nadfndmndngjkdfnjndfngnfddfme"
+                    android:textColor="@color/white"
+
+                    />
+        -->
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

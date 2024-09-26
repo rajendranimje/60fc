@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+
+        <!--
+            <ImageView
+                android:id="@+id/virtuo_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/mpin_ll"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/dp_20"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/user2"
+                android:tint="@color/white" />
+        -->
+
+        <LinearLayout
+            android:id="@+id/mpin_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp_20"
+            android:paddingBottom="20dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="Enter Current MPIN"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <com.chaos.view.PinView
+                android:id="@+id/pin_current"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:imeOptions="actionNext"
+                android:inputType="numberPassword"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cursorColor="@color/white"
+                app:itemCount="6"
+                app:itemHeight="40dp"
+                app:itemRadius="4dp"
+                app:itemSpacing="10dp"
+                app:itemWidth="40dp"
+                app:lineColor="@color/white"
+                app:lineWidth="2dp"
+                app:viewType="rectangle" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#fff"
+                android:layout_margin="@dimen/dp_10"
+                android:alpha="0.6"/>
+
+            <TextView
+                android:id="@+id/enter_mpin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="Enter New MPIN"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <com.chaos.view.PinView
+                android:id="@+id/pin1"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cursorColor="@color/white"
+                app:itemCount="6"
+                app:itemHeight="40dp"
+                app:itemRadius="4dp"
+                app:itemSpacing="10dp"
+                app:itemWidth="40dp"
+                app:lineColor="@color/white"
+                app:lineWidth="2dp"
+                app:viewType="rectangle" />
+
+
+            <TextView
+
+                android:id="@+id/cofirm_mpin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_20"
+                android:cursorVisible="false"
+                android:fontFamily="sans-serif"
+                android:padding="@dimen/dp_5"
+                android:text="Re-enter New MPIN"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <com.chaos.view.PinView
+                android:id="@+id/pin2"
+                style="@style/PinWidget.PinView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_5"
+                android:cursorVisible="false"
+                android:imeOptions="actionDone"
+                android:inputType="numberPassword"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:cursorColor="@color/white"
+                app:itemCount="6"
+                app:itemHeight="40dp"
+                app:itemRadius="4dp"
+                app:itemSpacing="10dp"
+                app:itemWidth="40dp"
+                app:lineColor="@color/white"
+                app:lineWidth="2dp"
+                app:viewType="rectangle" />
+
+            <!--
+                    <com.mukesh.OtpView
+                        android:clickable="false"
+                        android:enabled="false"
+                        android:id="@+id/otp_view2"
+                        style="@style/OtpWidget.OtpView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_10"
+                        android:alpha="0.9"
+                        android:fontFamily="sans-serif"
+                        android:inputType="numberPassword"
+                        android:itemBackground="@color/white"
+                        android:textColor="@color/colorPrimary"
+                        app:hideLineWhenFilled="true"
+                        app:itemCount="6"
+                        app:itemSpacing="@dimen/dp_5"
+                        app:lineColor="@color/black"
+                        app:lineWidth="4dp"
+                        app:viewType="rectangle"
+
+                        />
+            -->
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/generate_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mpin_ll"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/bt_background"
+            android:paddingLeft="@dimen/dp_20"
+            android:paddingRight="@dimen/dp_20"
+            android:text="Update MPIN"
+            android:textColor="@color/colorPrimary" />
+
+    </RelativeLayout>
+</layout>
